@@ -18,21 +18,24 @@ session_start();
     </div>
     <div class="formulario-iniciar-sesion">
       <form action="actions/procesar-inicio-de-sesion.php" method="POST">
-        <label for="numero_telefono_integrante">Número de teléfono:</label>
+        <label for="numero_telefono">Número de teléfono:</label>
         <div class="iconos-formulario-iniciar-sesion">
           <i class="fas fa-phone"></i>
-          <input type="text" id="numero_telefono_integrante" name="numero_telefono_integrante"
+          <input type="text" id="numero_telefono" name="numero_telefono"
                  pattern="^\d{10}$" title="El número de teléfono debe tener exactamente 10 dígitos." required />
         </div>
 
-        <label for="contrasena_integrante">Contraseña:</label>
+        <label for="contrasena">Contraseña:</label>
         <div class="iconos-formulario-iniciar-sesion">
           <i class="fas fa-lock"></i>
-          <input type="password" id="contrasena_integrante" name="contrasena_integrante" required />
+          <input type="password" id="contrasena" name="contrasena" required />
         </div>
 
         <input type="submit" value="Ingresar" />
       </form>
+      <div class="contenedor-link-recuperar-contrasena">
+        <a href="recuperar_contrasena.php">¿Olvidaste tu contraseña?</a>
+      </div>
       
         <?php
             if (isset($_SESSION['errorIniciarSesion'])) {

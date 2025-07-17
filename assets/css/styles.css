@@ -1,4 +1,466 @@
-/* Hover efecto para logo e h2 en navbar */
+.fondo-contrasena-actualizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../img/fondo-iniciar-sesion-ajetreados.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.fondo-contrasena-actualizada::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000096;
+    z-index: 1;
+}
+
+.contenedor-contrasena-actualizada {
+    z-index: 2;
+    width: 390px;
+    height: 370px;
+    background: linear-gradient(
+      to bottom right,
+      #0a0a0a,
+      rgb(27, 27, 27) 90%
+    );
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-contrasena-actualizada {
+    text-align: center;
+}
+
+.titulo-contrasena-actualizada h2 {
+    color: #5100bb;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.formulario-contrasena-actualizada label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #dabeff;
+    font-size: 16px;
+}
+
+.formulario-contrasena-actualizada input[type="email"] {
+    width: 270px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px 4px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+    color: #dabeffa2;
+}
+
+.formulario-contrasena-actualizada input[type="email"]:focus {
+    border-bottom-color: #220049;
+}
+
+.formulario-contrasena-actualizada input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #220049;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-contrasena-actualizada input[type="submit"]:hover {
+    background-color: #3c0081;
+    transform: scale(1.05);
+}
+
+.formulario-contrasena-actualizada input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.iconos-formulario-contrasena-actualizada {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.iconos-formulario-contrasena-actualizada i {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: #5100bb;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.iconos-formulario-contrasena-actualizada input {
+    padding-left: 30px !important;
+}
+
+.mensaje-contrasena-actualizada {
+    color: rgba(223, 130, 23, 0.856);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.contenedor-link-contrasena-actualizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contenedor-link-contrasena-actualizada a {
+    color: #dabeff;
+    font-size: 15px;
+    text-decoration: none;
+    background: rgba(81, 0, 187, 0.08);
+    padding: 7px 18px;
+    border-radius: 18px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #5100bb11;
+}
+
+.contenedor-link-contrasena-actualizada a:hover {
+    background: #5100bb;
+    color: #fff;
+    text-decoration: underline;
+    box-shadow: 0 4px 16px #5100bb33;
+}
+.fondo-nueva-contrasena-generada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../img/fondo-iniciar-sesion-ajetreados.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.fondo-nueva-contrasena-generada::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000096;
+    z-index: 1;
+}
+
+.contenedor-nueva-contrasena-generada {
+    z-index: 2;
+    width: 390px;
+    height: 370px;
+    background: linear-gradient(
+      to bottom right,
+      #0a0a0a,
+      rgb(27, 27, 27) 90%
+    );
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-nueva-contrasena-generada {
+    text-align: center;
+}
+
+.titulo-nueva-contrasena-generada h2 {
+    color: #5100bb;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.formulario-nueva-contrasena-generada label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #dabeff;
+    font-size: 16px;
+}
+
+.formulario-nueva-contrasena-generada input[type="email"] {
+    width: 270px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px 4px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+    color: #dabeffa2;
+}
+
+.formulario-nueva-contrasena-generada input[type="email"]:focus {
+    border-bottom-color: #220049;
+}
+
+.formulario-nueva-contrasena-generada input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #220049;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-nueva-contrasena-generada input[type="submit"]:hover {
+    background-color: #3c0081;
+    transform: scale(1.05);
+}
+
+.formulario-nueva-contrasena-generada input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.iconos-formulario-nueva-contrasena-generada {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.iconos-formulario-nueva-contrasena-generada i {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: #5100bb;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.iconos-formulario-nueva-contrasena-generada input {
+    padding-left: 30px !important;
+}
+
+.mensaje-nueva-contrasena-generada {
+    color: rgba(223, 130, 23, 0.856);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.contenedor-link-nueva-contrasena-generada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contenedor-link-nueva-contrasena-generada a {
+    color: #dabeff;
+    font-size: 15px;
+    text-decoration: none;
+    background: rgba(81, 0, 187, 0.08);
+    padding: 7px 18px;
+    border-radius: 18px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #5100bb11;
+}
+
+.contenedor-link-nueva-contrasena-generada a:hover {
+    background: #5100bb;
+    color: #fff;
+    text-decoration: underline;
+    box-shadow: 0 4px 16px #5100bb33;
+}
+.fondo-recuperar-contrasena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../img/fondo-iniciar-sesion-ajetreados.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.fondo-recuperar-contrasena::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000096;
+    z-index: 1;
+}
+
+.contenedor-recuperar-contrasena {
+    z-index: 2;
+    width: 390px;
+    height: 370px;
+    background: linear-gradient(
+      to bottom right,
+      #0a0a0a,
+      rgb(27, 27, 27) 90%
+    );
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-recuperar-contrasena {
+    text-align: center;
+}
+
+.titulo-recuperar-contrasena h2 {
+    color: #5100bb;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.formulario-recuperar-contrasena label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #dabeff;
+    font-size: 16px;
+}
+
+.formulario-recuperar-contrasena  input[type="email"] {
+    width: 270px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px 4px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+    color: #dabeffa2;
+}
+
+.formulario-recuperar-contrasena input[type="email"]:focus {
+    border-bottom-color: #220049;
+}
+
+.formulario-recuperar-contrasena input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #220049;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-recuperar-contrasena input[type="submit"]:hover {
+    background-color: #3c0081;
+    transform: scale(1.05);
+}
+
+.formulario-recuperar-contrasena input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.iconos-formulario-recuperar-contrasena {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.iconos-formulario-recuperar-contrasena i {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: #5100bb;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.iconos-formulario-recuperar-contrasena input {
+    padding-left: 30px !important;
+}
+
+.mensaje-recuperar-contrasena {
+    color: rgba(223, 130, 23, 0.856);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.contenedor-link-recuperar-contrasena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contenedor-link-recuperar-contrasena a {
+    color: #dabeff;
+    font-size: 15px;
+    text-decoration: none;
+    background: rgba(81, 0, 187, 0.08);
+    padding: 7px 18px;
+    border-radius: 18px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #5100bb11;
+}
+
+.contenedor-link-recuperar-contrasena a:hover {
+    background: #5100bb;
+    color: #fff;
+    text-decoration: underline;
+    box-shadow: 0 4px 16px #5100bb33;
+}
+
 .navbar .logo a img,
 .navbar .logo h2 {
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -180,6 +642,15 @@ body {
     flex-direction: column;
 }
 
+.mensaje-error {
+    color: rgba(223, 23, 23, 0.856); 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    padding: 12px;
+}
+
 .error-mensaje-iniciar-sesion {
     color: rgba(223, 23, 23, 0.856); 
     font-family: 'Poppins', sans-serif;
@@ -287,7 +758,6 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-
 
 .buscar-agregar-cancion-repertorio {
     display: flex;

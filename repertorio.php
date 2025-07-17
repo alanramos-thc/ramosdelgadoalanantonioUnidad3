@@ -1,12 +1,14 @@
 <?php
 session_start();
 
-$integrante = $_SESSION['integrante'];
 
-if (!isset($_SESSION['integrante'])) {
+if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo_usuario'])) {
     header("Location: iniciar_sesion.php");
     exit();
 }
+
+$usuario = $_SESSION['usuario'];
+$tipo_usuario = $_SESSION['tipo_usuario'];
 
 require_once __DIR__ . '/models/cancion.php';
 $cancion = new Cancion();
@@ -63,9 +65,11 @@ $canciones = $cancion->obtenerCanciones();
       <input type="text" id="buscadorCancion" placeholder="Buscar canción por título...">
       <i class="fa fa-search"></i>
     </div>
+    <?php if ($tipo_usuario === 'integrante'): ?>
     <div class="agregar-cancion-repertorio animate__animated animate__fadeInRight animate__slower">
       <button class="btn-agregar-cancion" data-bs-toggle="modal" data-bs-target="#modalAgregarCancion"> Agregar <i class="fa fa-plus"></i></button>
     </div>
+    <?php endif; ?>
   </div>
 
 
@@ -74,16 +78,16 @@ $canciones = $cancion->obtenerCanciones();
             <tr>
                 <th>Portada</th>
                 <th>Título</th>
-                <th>Acciones</th>
+                <?php if ($tipo_usuario === 'integrante'): ?><th>Acciones</th><?php endif; ?>
             </tr>
         </thead>
         <tbody id="tablaCanciones">
-
         </tbody>
     </table>
 </div>
 
 
+<?php if ($tipo_usuario === 'integrante'): ?>
 <div class="modal fade" id="modalAgregarCancion" tabindex="-1" aria-labelledby="modalAgregarCancionLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <form id="formAgregarCancion" enctype="multipart/form-data">
@@ -114,6 +118,7 @@ $canciones = $cancion->obtenerCanciones();
     </form>
   </div>
 </div>
+<?php endif; ?>
 
 
 <div class="modal fade" id="modalEditarCancion" tabindex="-1" aria-labelledby="modalEditarCancionLabel" aria-hidden="true">
@@ -170,8 +175,12 @@ $canciones = $cancion->obtenerCanciones();
   </div>
 </div>
 
+<script>
+  window.tipoUsuarioAjetreados = '<?php echo $tipo_usuario; ?>';
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="assets/js/app.js"></script>
+
 </body>
 </html>

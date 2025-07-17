@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', function () {
+  const passwordInput = document.getElementById('nueva_contrasena');
+  const confirmInput = document.getElementById('confirmar_nueva_contrasena');
+  const form = document.querySelector('.formulario-recuperar-contrasena form');
+  const submitBtn = form ? form.querySelector('input[type="submit"]') : null;
+  const errorMsg = document.getElementById('error-password-match');
+
+  if (passwordInput && confirmInput && submitBtn && errorMsg) {
+    function checkPasswords() {
+      if (passwordInput.value && confirmInput.value && passwordInput.value !== confirmInput.value) {
+        errorMsg.style.display = 'block';
+        errorMsg.textContent = 'Las contraseñas no coinciden.';
+        submitBtn.disabled = true;
+      } else {
+        errorMsg.style.display = 'none';
+        errorMsg.textContent = '';
+        submitBtn.disabled = !(passwordInput.value && confirmInput.value && passwordInput.value === confirmInput.value);
+      }
+    }
+    passwordInput.addEventListener('input', checkPasswords);
+    confirmInput.addEventListener('input', checkPasswords);
+
+    submitBtn.disabled = true;
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const hamburguesa = document.getElementById('hamburguesa');
   const menu = document.getElementById('menuLateral');
@@ -28,9 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
   (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'959a704932a616d1',t:'MTc1MTU4ODIzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
 });
 
+
 $(document).ready(function () {
+
     recargarTabla();
-    
+
     function recargarTabla() {
         $.ajax({
             url: 'ajax/tabla_canciones.php',

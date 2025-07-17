@@ -1,12 +1,13 @@
 <?php
 session_start();
 
-$integrante = $_SESSION['integrante'];
 
-if (!isset($_SESSION['integrante'])) {
+if (!isset($_SESSION['usuario']) || !isset($_SESSION['tipo_usuario'])) {
     header("Location: iniciar_sesion.php");
     exit();
 }
+$usuario = $_SESSION['usuario'];
+$tipo_usuario = $_SESSION['tipo_usuario'];
 ?>
 
 <!DOCTYPE html>
